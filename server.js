@@ -1,11 +1,11 @@
+/* Empty JS object to act as endpoint for all routes */
+projectData = {};
+
 //express to run server and routes
 const express = require('express');
 
 //start up an instance app
 const app = express();
-
-//JS object
-const appData = {}
 
 //Dependencies
 const bodyParser = require('body-parser');
@@ -20,7 +20,7 @@ const cors = require('cors');
 app.use(cors());
 
 //intialize the main project folder
-app.use(express.static('demo'));
+app.use(express.static('website'));
 
 const port = 8000
 
@@ -32,17 +32,21 @@ function listening(){
     console.log(`running on localhost: {$port}`);
 }
 
-//GET-Route
-app.get('/all', function(req, res) {
-    res.send(appData);
-});
-
 //post method route
 const data = []
 
-app.post('/', /*function name */ );
+app.post('/addweather', storeWeatherData );
 
-function /*function name*/ (req, res) {
-    data.push(req.body);
-    console.log(req.body);
+function storeWeatherData (req, res) {
+    projectData.temp= req.body.temp;
+    projectData.date = req.body.date;
+    projectData.content = req.body.content;
+    res.send(projectData);
+};
+
+//GET-Route
+app.get('/allData', sendData) 
+
+function sendData(req, res) {
+    res.send(projectData);
 };
