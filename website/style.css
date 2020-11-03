@@ -1,14 +1,14 @@
 body{
-    background: #fffff8;
+    background-image: url("ADK.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
     color: #f0d43a;
     justify-content: center;
     grid-gap: 1em;
@@ -41,6 +41,7 @@ body{
 }
 
 .headline {
+    font-size: 80px;
 
 }
 .title{
@@ -57,7 +58,7 @@ input{
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
+    background:white;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
@@ -65,9 +66,9 @@ input{
 }
 
 button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
+    width: 200px;
+    height: 50px;
+    background: grey;
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
@@ -79,7 +80,7 @@ h1{
 }
 
 textarea{
-    background:#22b2da;
+    background: white;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
@@ -95,17 +96,14 @@ button:focus {
 ::placeholder { /* Firefox, Chrome, Opera */ 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
-
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
-
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
-
 } 
