@@ -29,7 +29,7 @@ const server = app.listen(port, listening);
 //call back to debug
 function listening(){
     console.log("server running"); 
-    console.log(`running on localhost: {$port}`);
+    console.log(`running on localhost: ${port}`);
 }
 
 //post method route
@@ -38,14 +38,14 @@ const data = []
 app.post('/addweather', storeWeatherData );
 
 function storeWeatherData (req, res) {
-    projectData.temp= req.body.temp;
-    projectData.date = req.body.date;
-    projectData.content = req.body.content;
+    projectData.date= req.body.date;
+    projectData.temp = req.body.temp;
+    projectData.content=req.body.content;
     res.send(projectData);
 };
 
 //GET-Route
-app.get('/allData', sendData) 
+app.get('/all', sendData) 
 
 function sendData(req, res) {
     res.send(projectData);
