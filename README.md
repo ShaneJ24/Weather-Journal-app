@@ -11,5 +11,3 @@ This project was about working with Web APIs and asynchronous code, creating a w
 7. Implemented GET and POST routes on both the client and the server.
 8. Dynamically display app data.
 9. Add event listener to the form button using JS.
-# About
-Project number three in the Front-End Web Developer Nanodegree program at Udacity.
