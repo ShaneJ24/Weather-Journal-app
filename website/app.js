@@ -11,7 +11,6 @@ let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //event listener to add function
-// document.getElementById('generate').addEventListener('click', performAction);
 document.getElementById('form').addEventListener('submit', performAction);
 
 //function for event listener 
